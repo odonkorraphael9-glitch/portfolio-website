@@ -30,7 +30,7 @@ function Work() {
       <main>
         <section className="section projects-section">
           <div className="container">
-            <div className="section-header-editorial">
+            <div className="section-header-editorial work-page-header">
               <div className="editorial-eyebrow"><span>SELECTED ARCHIVE</span><span className="divider-slash">/</span><span>2024 — 2026</span></div>
               <h1 className="section-title-editorial">Work & Case Studies</h1>
               <p className="section-subtitle-editorial">A selected index of identity, editorial, packaging, typography and software development projects.</p>

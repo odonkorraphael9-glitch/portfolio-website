@@ -154,6 +154,10 @@ img, svg {
   margin-bottom: 3.2rem;
 }
 
+.work-page-header {
+  text-align: left;
+}
+
 .editorial-eyebrow {
   display: flex;
   align-items: center;
