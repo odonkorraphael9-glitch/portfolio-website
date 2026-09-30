@@ -419,6 +419,64 @@ const ProjectVisual = ({ id, title, subtitle, image }) => {
           </div>
         </div>
       );
+    case 8:
+      return (
+        <div className="visual-canvas visual-software visual-portfolio">
+          <div className="software-window">
+            <div className="software-window-bar">
+              <span className="software-window-dots"><i></i><i></i><i></i></span>
+              <span>raphaelodonkor.dev</span>
+              <span>↗</span>
+            </div>
+            <div className="portfolio-cover-content">
+              <span className="software-kicker">DESIGNER & DEVELOPER</span>
+              <strong>Ideas made<br /><em>visible.</em></strong>
+              <span className="portfolio-cover-footer">SELECTED WORK / 2026</span>
+            </div>
+            <div className="portfolio-cover-shape"></div>
+          </div>
+          <span className="software-cover-index">01 / PORTFOLIO</span>
+        </div>
+      );
+    case 9:
+      return (
+        <div className="visual-canvas visual-software visual-studioflow">
+          <div className="studioflow-window">
+            <aside className="studioflow-sidebar">
+              <strong>sf<span>.</span></strong>
+              <i>▦</i><i>◷</i><i>□</i><i>⚙</i>
+            </aside>
+            <div className="studioflow-main">
+              <div className="studioflow-topline"><span>WORKSPACE / OVERVIEW</span><span>R</span></div>
+              <h3>Good morning, Raphael</h3>
+              <div className="studioflow-stats">
+                <div><small>ACTIVE PROJECTS</small><b>08</b><span>+2 this month</span></div>
+                <div><small>UPCOMING</small><b>03</b><span>Next 7 days</span></div>
+              </div>
+              <div className="studioflow-task"><span className="task-mark"></span><span>Portfolio redesign</span><small>IN PROGRESS</small></div>
+              <div className="studioflow-task"><span className="task-mark task-mark-warm"></span><span>Brand guidelines</span><small>REVIEW</small></div>
+            </div>
+          </div>
+          <span className="software-cover-index">02 / STUDIOFLOW</span>
+        </div>
+      );
+    case 10:
+      return (
+        <div className="visual-canvas visual-software visual-marketlink">
+          <div className="marketlink-topbar"><strong>market<span>link</span></strong><span>FIND LOCAL GOODS</span><span>GHANA / ACCRA</span></div>
+          <div className="marketlink-hero">
+            <span className="software-kicker">MADE NEAR YOU</span>
+            <h3>Good things,<br /><em>close to home.</em></h3>
+            <span className="marketlink-search">⌕ &nbsp; Find something special <b>→</b></span>
+          </div>
+          <div className="marketlink-products">
+            <div className="marketlink-product product-ceramic"><span>HANDMADE</span><b>Form<br />& Earth</b></div>
+            <div className="marketlink-product product-woven"><span>LOCAL MAKER</span><b>Everyday<br />Objects</b></div>
+            <div className="marketlink-product product-print"><span>SMALL BATCH</span><b>Print<br />House</b></div>
+          </div>
+          <span className="software-cover-index">03 / MARKETLINK</span>
+        </div>
+      );
     default:
       return (
         <div className="visual-canvas">

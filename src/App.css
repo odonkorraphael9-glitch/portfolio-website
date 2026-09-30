@@ -1460,6 +1460,231 @@ img, svg {
   color: #aaa;
 }
 
+/* Software project cover visuals */
+.visual-software {
+  padding: 1.8rem;
+  font-family: var(--font-body);
+}
+
+.software-window {
+  width: 88%;
+  height: 82%;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.3);
+}
+
+.visual-portfolio {
+  color: #f7f5f0;
+  background: #ad351f;
+}
+
+.visual-portfolio .software-window { background: #171916; }
+
+.software-window-bar {
+  height: 34px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.8rem;
+  color: #b8b7b1;
+  background: #252722;
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+}
+
+.software-window-dots { display: flex; gap: 4px; }
+.software-window-dots i { width: 6px; height: 6px; border-radius: 50%; background: #e56d58; }
+.software-window-dots i:nth-child(2) { background: #e2b65a; }
+.software-window-dots i:nth-child(3) { background: #80a77a; }
+
+.portfolio-cover-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  height: calc(100% - 34px);
+  flex-direction: column;
+  justify-content: center;
+  padding: 1.8rem 2.2rem;
+}
+
+.software-kicker,
+.portfolio-cover-footer,
+.software-cover-index {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+}
+
+.portfolio-cover-content strong {
+  margin: 0.7rem 0 1.4rem;
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 4vw, 4.4rem);
+  font-weight: 500;
+  line-height: 0.95;
+}
+
+.portfolio-cover-content em { color: #ef8b68; font-weight: 400; }
+
+.portfolio-cover-shape {
+  position: absolute;
+  width: 42%;
+  aspect-ratio: 1;
+  right: -7%;
+  bottom: -28%;
+  border: 1px solid rgba(238, 139, 104, 0.65);
+  border-radius: 50%;
+  box-shadow: 0 0 0 18px rgba(238, 139, 104, 0.06), 0 0 0 38px rgba(238, 139, 104, 0.04);
+}
+
+.software-cover-index {
+  position: absolute;
+  right: 1.8rem;
+  bottom: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.visual-studioflow { color: #f5f2e9; background: #263a34; }
+
+.studioflow-window {
+  width: 91%;
+  min-height: 76%;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 7px;
+  background: #f8f7f2;
+  color: #242a25;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.26);
+}
+
+.studioflow-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.8rem 0.35rem;
+  background: #20322d;
+  color: #e8e6da;
+}
+
+.studioflow-sidebar strong { margin-bottom: 0.4rem; font-size: 1.1rem; }
+.studioflow-sidebar strong span { color: #e59368; }
+.studioflow-sidebar i { font-size: 0.85rem; font-style: normal; opacity: 0.75; }
+.studioflow-main { padding: 1rem 1.2rem; }
+
+.studioflow-topline {
+  display: flex;
+  justify-content: space-between;
+  color: #777d75;
+  font-family: var(--font-mono);
+  font-size: 0.54rem;
+}
+
+.studioflow-topline span:last-child {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9ded1;
+  color: #4d514b;
+}
+
+.studioflow-main h3 { margin: 0.9rem 0; font-size: clamp(0.85rem, 1.7vw, 1.25rem); }
+.studioflow-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem; margin-bottom: 0.65rem; }
+
+.studioflow-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.22rem;
+  padding: 0.55rem;
+  border: 1px solid #e7e4db;
+  border-radius: 4px;
+}
+
+.studioflow-stats small,
+.studioflow-task small { color: #83867e; font-family: var(--font-mono); font-size: 0.46rem; }
+.studioflow-stats b { font-size: 1.05rem; }
+.studioflow-stats span { color: #748474; font-size: 0.5rem; }
+
+.studioflow-task {
+  display: grid;
+  grid-template-columns: 8px 1fr auto;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.52rem 0;
+  border-top: 1px solid #e8e6de;
+  font-size: 0.58rem;
+}
+
+.task-mark { width: 7px; height: 7px; border-radius: 50%; background: #668b70; }
+.task-mark-warm { background: #d68e62; }
+
+.visual-marketlink { display: block; padding: 1.5rem 1.8rem; color: #242d26; background: #e7eadb; }
+
+.marketlink-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  height: 28px;
+  border-bottom: 1px solid rgba(36, 45, 38, 0.2);
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+}
+
+.marketlink-topbar strong { font-family: var(--font-display); font-size: 0.9rem; }
+.marketlink-topbar strong span { color: #c45e40; }
+.marketlink-hero { position: relative; z-index: 1; padding: 1rem 0 0.8rem; }
+.marketlink-hero h3 { margin: 0.4rem 0 0.75rem; font-family: var(--font-serif); font-size: clamp(1.5rem, 3vw, 2.6rem); font-weight: 500; line-height: 0.98; }
+.marketlink-hero h3 em { color: #b7553d; font-weight: 400; }
+
+.marketlink-search {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 75%;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid rgba(36, 45, 38, 0.24);
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.55);
+  color: #73786d;
+  font-size: 0.55rem;
+}
+
+.marketlink-search b { color: #b7553d; }
+.marketlink-products { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.55rem; height: 34%; }
+
+.marketlink-product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+  padding: 0.55rem;
+  border-radius: 3px;
+  color: #2e332d;
+}
+
+.marketlink-product span { font-family: var(--font-mono); font-size: 0.43rem; }
+.marketlink-product b { font-family: var(--font-serif); font-size: clamp(0.72rem, 1.4vw, 1rem); font-weight: 500; line-height: 1; }
+.product-ceramic { background: #c6a483; }
+.product-woven { background: #cbd1b5; }
+.product-print { background: #dfb7a0; }
+.visual-marketlink .software-cover-index { color: #454b40; }
+
+@media (max-width: 520px) {
+  .visual-software { padding: 1rem; }
+  .portfolio-cover-content { padding: 1.2rem; }
+  .studioflow-main { padding: 0.7rem; }
+  .marketlink-topbar { font-size: 0.42rem; }
+  .marketlink-search { max-width: 100%; }
+}
+
 /* ==========================================================================
    CASE STUDY MODAL
    ========================================================================== */
