@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './App.css';
+import retreatImage from './assets/retreat.jpg';
+import visitationImage from './assets/visitation.jpg';
+import quoteImage from './assets/QUOTE.jpg';
+import journeyImage from './assets/journey.jpg';
+import examsImage from './assets/exams.jpg';
+import freshersImage from './assets/freshers.jpg';
+import awardsNightImage from './assets/awards night MAIN.jpg';
 
 // ============================================================================
 // DATA & CASE STUDIES
@@ -28,7 +36,8 @@ const projectsData = [
       "52-Page Brand Guidelines & Print Standards",
       "Blind Debossed Cotton Paper Stationery"
     ],
-    behanceUrl: "https://behance.net"
+    behanceUrl: "https://behance.net",
+    image: retreatImage
   },
   {
     id: 2,
@@ -53,7 +62,8 @@ const projectsData = [
       "Asymmetric 12-Column Layout System",
       "Architectural Photo Essay Curation"
     ],
-    behanceUrl: "https://behance.net"
+    behanceUrl: "https://behance.net",
+    image: visitationImage
   },
   {
     id: 3,
@@ -78,7 +88,8 @@ const projectsData = [
       "Custom Die-Cut Inner Dust Sleeves",
       "Limited Tour Posters & Cassette Editions"
     ],
-    behanceUrl: "https://behance.net"
+    behanceUrl: "https://behance.net",
+    image: quoteImage
   },
   {
     id: 4,
@@ -103,7 +114,8 @@ const projectsData = [
       "Handcrafted Origin Stamp & Icon Set",
       "Cafe Menu Boards, Signage & Merch"
     ],
-    behanceUrl: "https://behance.net"
+    behanceUrl: "https://behance.net",
+    image: journeyImage
   },
   {
     id: 5,
@@ -128,7 +140,8 @@ const projectsData = [
       "Bi-Lingual Exhibition Catalog (96 Pages)",
       "Animated Digital Street Billboard System"
     ],
-    behanceUrl: "https://behance.net"
+    behanceUrl: "https://behance.net",
+    image: examsImage
   },
   {
     id: 6,
@@ -153,21 +166,103 @@ const projectsData = [
       "Art Direction for Editorial Campaign Photography",
       "Collector Press Kit & Fragrance Discovery Booklet"
     ],
-    behanceUrl: "https://behance.net"
+    behanceUrl: "https://behance.net",
+    image: freshersImage
+  },
+  {
+    id: 7,
+    title: "AWARDS NIGHT",
+    subtitle: "Evening Event Identity & Social Campaign",
+    category: "Branding",
+    year: "2025",
+    client: "Studio Awards Committee",
+    role: "Event Identity, Social Campaign & On-site Visual Direction",
+    description: "A premium event branding system for a formal recognition night, blending contemporary typography with a warm cinematic palette and highly legible social-ready graphics for announcements, signage and digital promotion.",
+    tags: ["Event Branding", "Social Media", "Typography", "Campaign"],
+    palette: [
+      { name: "Deep Plum", hex: "#1E1427" },
+      { name: "Champagne Gold", hex: "#D5B57A" },
+      { name: "Warm Ivory", hex: "#F6F0E8" },
+      { name: "Velvet Black", hex: "#0D0D0D" }
+    ],
+    typography: "Playfair Display & Plus Jakarta Sans",
+    deliverables: [
+      "Event Identity System",
+      "Poster & Social Campaign Kit",
+      "Stage Backdrop & Signage Direction",
+      "Digital Invitation Suite"
+    ],
+    behanceUrl: "https://behance.net",
+    image: awardsNightImage
+  },
+  {
+    id: 8,
+    title: "Personal website",
+    subtitle: "Portfolio Website & Front-end Development",
+    category: "Software Development",
+    year: "2026",
+    client: "Raphael Nuertey Odonkor",
+    role: "Design, Development & Art Direction",
+    description: "A personal portfolio bringing selected design work, creative practice and project inquiries together in one editorial-inspired digital experience.",
+    tags: ["Portfolio", "React", "Responsive Design"],
+    typography: "Playfair Display & Plus Jakarta Sans",
+    deliverables: [
+      "Portfolio Art Direction & Visual System",
+      "Responsive Project Archive and Case Studies",
+      "Interactive Typography Lab",
+      "Project Inquiry Experience"
+    ]
+  },
+  {
+    id: 9,
+    title: "StudioFlow Dashboard (Concept)",
+    subtitle: "Project and Client Management Web App",
+    category: "Software Development",
+    year: "2026",
+    client: "Independent Concept",
+    role: "Product Design & Front-end Development",
+    description: "A concept for a compact studio dashboard that brings project status, client notes, deadlines and next actions into one focused workspace. Designed to help independent creatives keep their work organized without adding unnecessary process.",
+    tags: ["React", "Dashboard", "Product Design", "Responsive UI"],
+    typography: "Plus Jakarta Sans & JetBrains Mono",
+    deliverables: [
+      "Responsive Project Overview Dashboard",
+      "Client and Project Status Views",
+      "Deadline and Task Tracking Interface",
+      "Reusable Front-end Component System"
+    ]
+  },
+  {
+    id: 10,
+    title: "MarketLink (Concept)",
+    subtitle: "Mobile-first Local Marketplace",
+    category: "Software Development",
+    year: "2026",
+    client: "Independent Concept",
+    role: "Product Design & Front-end Development",
+    description: "A marketplace concept for helping local makers present products and connect with nearby customers. The experience focuses on clear product discovery, seller profiles and a streamlined inquiry flow across mobile and desktop screens.",
+    tags: ["E-commerce", "React", "Mobile-first", "Product Discovery"],
+    typography: "Space Grotesk & Plus Jakarta Sans",
+    deliverables: [
+      "Marketplace Browse and Search Experience",
+      "Product Detail and Seller Profile Views",
+      "Responsive Mobile-first Interface",
+      "Interactive Inquiry Flow Prototype"
+    ]
   }
 ];
 
 const designerInfo = {
   name: "Raphael Nuertey Odonkor",
-  title: "Graphic Designer & Art Director",
+  title: "Graphic Designer, Art Director & Software Developer",
   location: "Accra / Available Worldwide",
   availability: "Available for Commissions & Freelance — 2026",
-  bio: "I am a Graphic Designer and Art Director working at the intersection of bold typography, deliberate layout, and timeless brand craft. With a focus on visual art and technical precision, I build identity systems, packaging, and editorial publications that command attention and communicate with unmistakable clarity.",
+  bio: "I am a Graphic Designer, Art Director and Software Developer working across visual identity, editorial design and responsive web experiences. I combine bold typography and deliberate layout with front-end development to build clear, polished digital experiences and lasting brand systems.",
   disciplines: [
     { title: "Brand Identity", desc: "Monograms, comprehensive visual systems, brand books & style guidelines." },
     { title: "Editorial & Print", desc: "Magazine layouts, art book curation, typography systems & pre-press perfection." },
     { title: "Packaging & Physical", desc: "Structural packaging, foil finishes, tactile paper stock curation & retail shelf impact." },
-    { title: "Art Direction", desc: "Concept ideation, creative photography direction & campaign storytelling." }
+    { title: "Art Direction", desc: "Concept ideation, creative photography direction & campaign storytelling." },
+    { title: "Software Development", desc: "Responsive websites and interactive front-end experiences built with modern web technologies." }
   ],
   awards: [
     { year: "2025", title: "Editorial Excellence Gold", org: "International Design Guild" },
@@ -196,7 +291,15 @@ const designerInfo = {
 // ============================================================================
 // COMPONENT: GRAPHIC DESIGN VISUAL MOCKUPS
 // ============================================================================
-const ProjectVisual = ({ id, title, subtitle }) => {
+const ProjectVisual = ({ id, title, subtitle, image }) => {
+  if (image) {
+    return (
+      <div className="visual-canvas visual-image-frame">
+        <img src={image} alt={title} className="project-visual-image" />
+      </div>
+    );
+  }
+
   switch (id) {
     case 1:
       return (
@@ -358,7 +461,7 @@ const CaseStudyModal = ({ project, onClose }) => {
         </div>
 
         <div className="modal-visual-hero">
-          <ProjectVisual id={project.id} title={project.title} subtitle={project.subtitle} />
+          <ProjectVisual id={project.id} title={project.title} subtitle={project.subtitle} image={project.image} />
         </div>
 
         <div className="modal-body-grid">
@@ -452,7 +555,7 @@ function App() {
 
   // Contact form state
   const [projectType, setProjectType] = useState('Brand Identity');
-  const [budgetTier, setBudgetTier] = useState('$5,000 – $10,000');
+  const [budgetTier, setBudgetTier] = useState('GH₵3,000 – GH₵6,000');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -463,9 +566,10 @@ function App() {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const directEmail = "odonkorraphael9@gmail.com";
-  const categories = ['All', 'Branding', 'Editorial', 'Packaging', 'Typography'];
-  const projectTypes = ['Brand Identity', 'Custom Packaging', 'Editorial & Book Design', 'Typography / Poster Series', 'Comprehensive Rebrand'];
-  const budgetTiers = ['$3,000 – $5,000', '$5,000 – $10,000', '$10,000+'];
+  const categories = ['All', 'Branding', 'Editorial', 'Packaging', 'Typography', 'Software Development'];
+  const projectTypes = ['Brand Identity', 'Custom Packaging', 'Editorial & Book Design', 'Typography / Poster Series', 'Software Development', 'Comprehensive Rebrand'];
+  const budgetTiers = ['GH₵1,000 – GH₵3,000', 'GH₵3,000 – GH₵6,000', 'GH₵6,000+'];
+  const whatsappNumber = '233536397402';
 
   const fontPairs = {
     editorial: {
@@ -522,9 +626,21 @@ function App() {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    setFormStatus('success');
-    setFormData({ name: '', email: '', timeline: 'Within 2-3 months', message: '' });
-    setTimeout(() => setFormStatus(''), 6000);
+    const inquiryMessage = [
+      'New Project Inquiry',
+      '',
+      `Project type: ${projectType}`,
+      `Budget range: ${budgetTier}`,
+      `Name / company: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Desired timeline: ${formData.timeline}`,
+      '',
+      'Project brief:',
+      formData.message
+    ].join('\n');
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(inquiryMessage)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    setFormStatus('whatsapp');
   };
 
   const scrollToTop = () => {
@@ -540,31 +656,23 @@ function App() {
       {/* ================= NAVBAR ================= */}
       <header className={`navbar-editorial ${scrolled ? 'nav-scrolled' : ''}`}>
         <div className="container nav-container">
-          <a href="#home" className="logo-editorial">
-            <span className="logo-initials">RNO</span>
+          <Link to="/" className="logo-editorial">
+            <span className="logo-initials">RK</span>
             <span className="logo-sub">STUDIO / 26</span>
-          </a>
+          </Link>
 
           <nav className="nav-desktop">
-            <a href="#projects" className="nav-link-editorial">Work</a>
-            <a href="#about" className="nav-link-editorial">About & Ethos</a>
-            <a href="#contact" className="nav-link-editorial">Commission</a>
+            <Link to="/work" className="nav-link-editorial">Work</Link>
+            <Link to="/about" className="nav-link-editorial">About & Ethos</Link>
+            <Link to="/commission" className="nav-link-editorial">Commission</Link>
 
             <div className="nav-social-icons">
-              <a href="https://behance.net" target="_blank" rel="noopener noreferrer" aria-label="Behance" title="Behance">
+              <a href="https://github.com/odonkorraphael9-glitch" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M16 8h4M3 6h6a3 3 0 0 1 0 6H3zm0 6h7a3 3 0 0 1 0 6H3zM14 12a4 4 0 1 0 8 0 4 4 0 0 0-8 0z" />
+                  <path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.2-1.5 6.2-6.7a5.2 5.2 0 0 0-1.4-3.6 4.8 4.8 0 0 0-.1-3.6S17.6 1.2 15 3a13.3 13.3 0 0 0-7 0C5.4 1.2 4.2 1.5 4.2 1.5a4.8 4.8 0 0 0-.1 3.6 5.2 5.2 0 0 0-1.4 3.6c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.7V22" />
                 </svg>
               </a>
-              <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" aria-label="Dribbble" title="Dribbble">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M19.13 5.09C15.22 9.14 10 10.44 2.25 10.94" />
-                  <path d="M21.75 12.84c-6.62-1.41-12.14 1-16.38 6.32" />
-                  <path d="M8.56 2.75c4.37 6 6 9.42 8 17.72" />
-                </svg>
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/raphael-odonkor-70b65539a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                   <rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" />
@@ -595,9 +703,9 @@ function App() {
               <button className="mobile-close-btn" onClick={() => setMenuOpen(false)}>✕</button>
             </div>
             <div className="mobile-nav-links">
-              <a href="#projects" onClick={() => setMenuOpen(false)}><span className="nav-num">01</span> Work & Case Studies</a>
-              <a href="#about" onClick={() => setMenuOpen(false)}><span className="nav-num">02</span> About & Ethos</a>
-              <a href="#contact" onClick={() => setMenuOpen(false)}><span className="nav-num">03</span> Commission / Inquiry</a>
+              <Link to="/work" onClick={() => setMenuOpen(false)}><span className="nav-num">01</span> Work & Case Studies</Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)}><span className="nav-num">02</span> About & Ethos</Link>
+              <Link to="/commission" onClick={() => setMenuOpen(false)}><span className="nav-num">03</span> Commission / Inquiry</Link>
             </div>
           </nav>
         </div>
@@ -612,7 +720,7 @@ function App() {
               <span className="cmyk-chip cmyk-m">M</span>
               <span className="cmyk-chip cmyk-y">Y</span>
               <span className="cmyk-chip cmyk-k">K</span>
-              <span className="cmyk-label">PRINT & DIGITAL DESIGN ARCHIVE</span>
+              <span className="cmyk-label">DESIGN & SOFTWARE PORTFOLIO</span>
             </div>
 
             <div className="registration-mark">
@@ -639,17 +747,14 @@ function App() {
                 GRAPHIC <span className="serif-italic-accent">DESIGNER</span>
               </span>
               <span className="hero-giant-sub">
-                & Visual Identity Specialist
+                Art Director & Software Developer
               </span>
             </h1>
 
             <div className="hero-layout-split">
               <div className="hero-statement-col">
                 <p className="hero-mission-lead">
-                  I craft enduring brand identities, tactile packaging suites, 
-                  and editorial publications. Grounded in meticulous typography, 
-                  grid systems, and print production, I help ambitious brands tell unforgettable stories
-                   and also help business owners reach a larger audience.
+                  I design enduring brand identities, tactile packaging, and editorial publications, and develop responsive websites and interactive digital experiences. By combining visual craft with software development, I help ambitious brands communicate clearly and reach a wider audience.
                 </p>
 
                 <div className="hero-core-tags">
@@ -783,9 +888,9 @@ function App() {
                 </div>
 
                 <div className="project-card-visual">
-                  <ProjectVisual id={project.id} title={project.title} subtitle={project.subtitle} />
+                  <ProjectVisual id={project.id} title={project.title} subtitle={project.subtitle} image={project.image} />
                   <div className="project-view-overlay">
-                    <span className="overlay-prompt">View Case Study & Specs →</span>
+                    <span className="overlay-prompt">{project.category === 'Software Development' ? 'View Project Details →' : 'View Case Study & Specs →'}</span>
                   </div>
                 </div>
 
@@ -804,7 +909,7 @@ function App() {
 
                   <div className="project-card-footer">
                     <span className="read-case-study">
-                      Read Case Study →
+                      {project.category === 'Software Development' ? 'View Project Details →' : 'Read Case Study →'}
                     </span>
                   </div>
                 </div>
@@ -987,9 +1092,9 @@ function App() {
             </div>
 
             <div className="contact-form-col">
-              {formStatus === 'success' && (
+              {formStatus === 'whatsapp' && (
                 <div className="success-editorial-msg">
-                  ✦ Thank you! Your project inquiry has been received. I will review the scope and reply within 24-48 hours.
+                  Your inquiry is ready in WhatsApp. Review the details and tap Send to deliver it.
                 </div>
               )}
 
@@ -1083,7 +1188,7 @@ function App() {
                 </div>
 
                 <button type="submit" className="btn btn-primary btn-submit-editorial">
-                  Transmit Project Inquiry →
+                  Send Inquiry on WhatsApp →
                 </button>
               </form>
             </div>
@@ -1096,7 +1201,7 @@ function App() {
         <div className="container">
           <div className="colophon-grid">
             <div className="colophon-brand">
-              <span className="colophon-logo">RNO STUDIO</span>
+              <span className="colophon-logo">RK STUDIO</span>
               <p className="colophon-tagline">
                 Distinctive visual identity systems, tactile packaging suites, 
                 and editorial print publications.
@@ -1118,9 +1223,8 @@ function App() {
             <div className="colophon-spec">
               <span className="colophon-heading">STUDIO ARCHIVES</span>
               <ul className="colophon-links">
-                <li><a href="https://behance.net" target="_blank" rel="noopener noreferrer">Behance Portfolio ↗</a></li>
-                <li><a href="https://dribbble.com" target="_blank" rel="noopener noreferrer">Dribbble Shots ↗</a></li>
-                <li><a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a></li>
+                <li><a href="https://github.com/odonkorraphael9-glitch" target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a></li>
+                <li><a href="https://www.linkedin.com/in/raphael-odonkor-70b65539a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer">LinkedIn Profile ↗</a></li>
               </ul>
             </div>
 

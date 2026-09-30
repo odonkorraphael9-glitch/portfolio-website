@@ -1041,6 +1041,17 @@ img, svg {
   overflow: hidden;
 }
 
+.visual-image-frame {
+  background: #0b0c10;
+}
+
+.project-visual-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 /* Lumen Botanica */
 .visual-lumen {
   background: radial-gradient(circle at 50% 50%, #253a2f 0%, #132019 100%);
@@ -1709,6 +1720,7 @@ img, svg {
 
 .about-editorial-section {
   background-color: var(--bg-color);
+  text-align: left;
 }
 
 .about-editorial-grid {
@@ -2027,6 +2039,7 @@ img, svg {
   font-size: clamp(2rem, 3.5vw, 3.1rem);
   font-weight: 800;
   line-height: 1.05;
+  color: var(--text-primary);
   letter-spacing: -0.03em;
   margin: 1rem 0 1.3rem;
 }
