@@ -977,12 +977,12 @@ function App() {
                   ? 'Graphic Design Projects'
                   : 'Design & Development Projects'}
             </h2>
-            <p className="section-subtitle-editorial">
+            <p className="section-subtitle-editorial projects-intro-copy">
               {filter === 'Software Development'
-                ? 'Responsive interfaces and web experiences—from property discovery to creative tools—built with a focus on clarity, usability and detail.'
+                ? 'Responsive websites and useful web apps, designed for clear, effortless experiences across screens.'
                 : filter === 'Graphic Design'
-                  ? 'Selected visual identities, typography, editorial systems, packaging and art direction—creative work presented with the same care as my digital projects.'
-                  : 'A curated selection of graphic design, art direction and front-end development—from visual identity and editorial work to responsive web experiences.'}
+                  ? 'Brand identities, typography, editorial design and packaging—crafted with clear ideas and attention to detail.'
+                  : 'Brand identities, editorial design and packaging sit alongside responsive websites and web apps—each crafted with clarity and care.'}
             </p>
           </div>
 

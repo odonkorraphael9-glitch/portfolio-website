@@ -195,6 +195,12 @@ img, svg {
   line-height: 1.6;
 }
 
+.projects-intro-copy {
+  max-width: 760px;
+  font-size: clamp(1rem, 1.25vw, 1.08rem);
+  line-height: 1.7;
+}
+
 /* ==========================================================================
    EDITORIAL NAVBAR
    ========================================================================== */
@@ -857,6 +863,19 @@ img, svg {
 
 .projects-section {
   background-color: var(--bg-color);
+}
+
+.projects-section .section-header-editorial {
+  text-align: center;
+}
+
+.projects-section .editorial-eyebrow {
+  justify-content: center;
+}
+
+.projects-section .section-subtitle-editorial {
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .filter-editorial-wrapper {
