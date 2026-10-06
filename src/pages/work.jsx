@@ -11,7 +11,8 @@ const projects = [
   { title: 'AWARDS NIGHT', category: 'Branding', year: '2025', subtitle: 'Evening Event Identity & Social Campaign' },
   { title: 'Personal website', category: 'Software Development', year: '2026', subtitle: 'Portfolio Website & Front-end Development' },
   { title: 'StudioFlow Dashboard (Concept)', category: 'Software Development', year: '2026', subtitle: 'Project and Client Management Web App' },
-  { title: 'MarketLink (Concept)', category: 'Software Development', year: '2026', subtitle: 'Mobile-first Local Marketplace' }
+  { title: 'MarketLink (Concept)', category: 'Software Development', year: '2026', subtitle: 'Mobile-first Local Marketplace' },
+  { title: 'HomeGrid', category: 'Software Development', year: '2026', subtitle: 'Responsive Estate Listing Website' }
 ];
 
 function Work() {
@@ -33,7 +34,7 @@ function Work() {
             <div className="section-header-editorial work-page-header">
               <div className="editorial-eyebrow"><span>SELECTED ARCHIVE</span><span className="divider-slash">/</span><span>2024 — 2026</span></div>
               <h1 className="section-title-editorial">Work & Case Studies</h1>
-              <p className="section-subtitle-editorial">A selected index of identity, editorial, packaging, typography and software development projects.</p>
+              <p className="section-subtitle-editorial">A selected index of visual design and front-end development projects, from brand identities and editorial systems to responsive web experiences.</p>
             </div>
             <div className="projects-grid-editorial">
               {projects.map((project, index) => (

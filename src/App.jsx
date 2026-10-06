@@ -248,21 +248,39 @@ const projectsData = [
       "Responsive Mobile-first Interface",
       "Interactive Inquiry Flow Prototype"
     ]
+  },
+  {
+    id: 11,
+    title: "HomeGrid",
+    subtitle: "Responsive Estate Listing Website",
+    category: "Software Development",
+    year: "2026",
+    client: "Independent Front-end Project",
+    role: "Front-end Development & UI Design",
+    description: "A property discovery experience concept designed to make browsing homes feel clear and approachable. HomeGrid pairs location-led search with scannable listing cards and a responsive layout that adapts from desktop to mobile.",
+    tags: ["React", "Real Estate", "Responsive UI", "Property Search"],
+    typography: "React & CSS",
+    deliverables: [
+      "Responsive Estate Listing Homepage",
+      "Property Discovery and Search Interface",
+      "Scannable Property Cards and Details",
+      "Mobile-first Front-end Layout"
+    ]
   }
 ];
 
 const designerInfo = {
   name: "Raphael Nuertey Odonkor",
-  title: "Graphic Designer, Art Director & Software Developer",
+  title: "Front-end Developer, Art Director & Graphic Designer",
   location: "Accra / Available Worldwide",
   availability: "Available for Commissions & Freelance — 2026",
-  bio: "I am a Graphic Designer, Art Director and Software Developer working across visual identity, editorial design and responsive web experiences. I combine bold typography and deliberate layout with front-end development to build clear, polished digital experiences and lasting brand systems.",
+  bio: "I am a front-end developer, art director and graphic designer based in Accra. I build responsive, user-focused web experiences with React and modern CSS, bringing a designer's eye for typography, layout and detail to every interface.",
   disciplines: [
+    { title: "Front-end Development", desc: "Responsive websites and interactive interfaces built with modern web technologies." },
     { title: "Brand Identity", desc: "Monograms, comprehensive visual systems, brand books & style guidelines." },
     { title: "Editorial & Print", desc: "Magazine layouts, art book curation, typography systems & pre-press perfection." },
     { title: "Packaging & Physical", desc: "Structural packaging, foil finishes, tactile paper stock curation & retail shelf impact." },
-    { title: "Art Direction", desc: "Concept ideation, creative photography direction & campaign storytelling." },
-    { title: "Software Development", desc: "Responsive websites and interactive front-end experiences built with modern web technologies." }
+    { title: "Art Direction", desc: "Concept ideation, creative photography direction & campaign storytelling." }
   ],
   awards: [
     { year: "2025", title: "Editorial Excellence Gold", org: "International Design Guild" },
@@ -271,6 +289,10 @@ const designerInfo = {
     { year: "2023", title: "Brand Identity Spotlight", org: "Behance Curated Portfolio" }
   ],
   tools: [
+    "React",
+    "JavaScript",
+    "HTML & CSS",
+    "Responsive Web Development",
     "Adobe Illustrator",
     "Adobe Photoshop",
     "Adobe InDesign",
@@ -477,6 +499,34 @@ const ProjectVisual = ({ id, title, subtitle, image }) => {
           <span className="software-cover-index">03 / MARKETLINK</span>
         </div>
       );
+    case 11:
+      return (
+        <div className="visual-canvas visual-homegrid">
+          <div className="homegrid-site-header">
+            <strong>home<span>grid</span></strong>
+            <nav><span>Buy</span><span>Rent</span><span>Sell</span></nav>
+            <span className="homegrid-sign-in">Sign in</span>
+          </div>
+          <div className="homegrid-content">
+            <div className="homegrid-intro">
+              <span className="software-kicker">FIND YOUR PLACE</span>
+              <h3>Space to call<br /><em>your own.</em></h3>
+              <p>Thoughtful homes, waiting to be found.</p>
+              <div className="homegrid-search"><span>⌕ &nbsp; City, neighborhood, or ZIP</span><b>Search</b></div>
+            </div>
+            <div className="homegrid-listings">
+              <div className="homegrid-listing homegrid-listing-one">
+                <span className="homegrid-listing-photo"></span>
+                <span className="homegrid-listing-copy"><b>Osu, Accra</b><small>3 beds · 2 baths</small><strong>GH₵ 8,500 <small>/ month</small></strong></span>
+              </div>
+              <div className="homegrid-listing homegrid-listing-two">
+                <span className="homegrid-listing-photo"></span>
+                <span className="homegrid-listing-copy"><b>East Legon</b><small>4 beds · 3 baths</small><strong>GH₵ 2.4M</strong></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      );
     default:
       return (
         <div className="visual-canvas">
@@ -524,7 +574,9 @@ const CaseStudyModal = ({ project, onClose }) => {
 
         <div className="modal-body-grid">
           <div className="modal-main-content">
-            <h3 className="modal-section-heading">Design Rationale & Concept</h3>
+            <h3 className="modal-section-heading">
+              {project.category === 'Software Development' ? 'Project Overview' : 'Design Rationale & Concept'}
+            </h3>
             <p className="modal-description">{project.description}</p>
 
             <div className="modal-deliverables-box">
@@ -546,46 +598,63 @@ const CaseStudyModal = ({ project, onClose }) => {
               <p>{project.role}</p>
             </div>
 
-            <div className="spec-card">
-              <h4>Typography System</h4>
-              <p className="spec-font">{project.typography}</p>
-            </div>
+            {project.category === 'Software Development' ? (
+              <div className="spec-card">
+                <h4>Front-end Stack & Focus</h4>
+                <div className="modal-tags">
+                  {project.tags.map((tag, idx) => (
+                    <span key={idx} className="spec-tag">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="spec-card">
+                <h4>Typography System</h4>
+                <p className="spec-font">{project.typography}</p>
+              </div>
+            )}
 
-            <div className="spec-card">
-              <h4>Color System & Swatches</h4>
-              <div className="palette-grid">
-                {project.palette?.map((swatch, idx) => (
-                  <div 
-                    key={idx} 
-                    className="palette-swatch"
-                    onClick={() => handleCopyColor(swatch.hex)}
-                    title={`Click to copy ${swatch.hex}`}
-                  >
-                    <span className="swatch-color" style={{ backgroundColor: swatch.hex }}></span>
-                    <div className="swatch-info">
-                      <span className="swatch-name">{swatch.name}</span>
-                      <span className="swatch-hex">{copiedHex === swatch.hex ? 'COPIED!' : swatch.hex}</span>
+            {project.palette?.length > 0 && (
+              <div className="spec-card">
+                <h4>Color System & Swatches</h4>
+                <div className="palette-grid">
+                  {project.palette.map((swatch, idx) => (
+                    <div
+                      key={idx}
+                      className="palette-swatch"
+                      onClick={() => handleCopyColor(swatch.hex)}
+                      title={`Click to copy ${swatch.hex}`}
+                    >
+                      <span className="swatch-color" style={{ backgroundColor: swatch.hex }}></span>
+                      <div className="swatch-info">
+                        <span className="swatch-name">{swatch.name}</span>
+                        <span className="swatch-hex">{copiedHex === swatch.hex ? 'COPIED!' : swatch.hex}</span>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
-            <div className="spec-card">
-              <h4>Disciplines</h4>
-              <div className="modal-tags">
-                {project.tags.map((tag, idx) => (
-                  <span key={idx} className="spec-tag">{tag}</span>
-                ))}
+            {project.category !== 'Software Development' && (
+              <div className="spec-card">
+                <h4>Disciplines</h4>
+                <div className="modal-tags">
+                  {project.tags.map((tag, idx) => (
+                    <span key={idx} className="spec-tag">{tag}</span>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             <div className="modal-actions">
-              <a href={project.behanceUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                View on Behance
-              </a>
+              {project.behanceUrl && (
+                <a href={project.behanceUrl} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                  View on Behance
+                </a>
+              )}
               <a href="#contact" onClick={onClose} className="btn btn-outline">
-                Inquire Similar Project
+                {project.category === 'Software Development' ? 'Discuss a similar build' : 'Inquire Similar Project'}
               </a>
             </div>
           </div>
@@ -624,7 +693,7 @@ function App() {
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const directEmail = "odonkorraphael9@gmail.com";
-  const categories = ['All', 'Branding', 'Editorial', 'Packaging', 'Typography', 'Software Development'];
+  const categories = ['All', 'Graphic Design', 'Branding', 'Editorial', 'Packaging', 'Typography', 'Software Development'];
   const projectTypes = ['Brand Identity', 'Custom Packaging', 'Editorial & Book Design', 'Typography / Poster Series', 'Software Development', 'Comprehensive Rebrand'];
   const budgetTiers = ['GH₵1,000 – GH₵3,000', 'GH₵3,000 – GH₵6,000', 'GH₵6,000+'];
   const whatsappNumber = '233536397402';
@@ -661,6 +730,7 @@ function App() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
 
   const toggleTheme = () => {
     setIsDarkMode(prev => {
@@ -707,7 +777,9 @@ function App() {
 
   const filteredProjects = filter === 'All'
     ? projectsData
-    : projectsData.filter(p => p.category === filter);
+    : filter === 'Graphic Design'
+      ? projectsData.filter(p => p.category !== 'Software Development')
+      : projectsData.filter(p => p.category === filter);
 
   return (
     <>
@@ -778,12 +850,12 @@ function App() {
               <span className="cmyk-chip cmyk-m">M</span>
               <span className="cmyk-chip cmyk-y">Y</span>
               <span className="cmyk-chip cmyk-k">K</span>
-              <span className="cmyk-label">DESIGN & SOFTWARE PORTFOLIO</span>
+              <span className="cmyk-label">FRONT-END / CREATIVE PORTFOLIO</span>
             </div>
 
             <div className="registration-mark">
-              <span className="crosshair">⌖</span>
-              <span>REGISTRATION: 100% PRE-PRESS READY</span>
+              <span className="crosshair">{'\u2316'}</span>
+              <span>BUILD STATUS: RESPONSIVE / INTERACTIVE</span>
             </div>
 
             <div className="masthead-badge">
@@ -794,86 +866,70 @@ function App() {
 
           <div className="hero-editorial-content">
             <div className="hero-intro-pill">
-              <span>✦ PORTFOLIO & STUDIO ARCHIVE</span>
-              <span className="divider-dot">•</span>
+              <span>{'\u2726'} PORTFOLIO & STUDIO ARCHIVE</span>
+              <span className="divider-dot">{'\u2022'}</span>
               <span>ACCRA / WORLDWIDE</span>
             </div>
 
             <h1 className="hero-main-heading">
               <span className="designer-name-tag">{designerInfo.name}</span>
               <span className="hero-giant-role">
-                GRAPHIC <span className="serif-italic-accent">DESIGNER</span>
+                FRONT-END <span className="serif-italic-accent">DEVELOPER</span>
               </span>
               <span className="hero-giant-sub">
-                Art Director & Software Developer
+                Graphic Designer & Art Director
               </span>
             </h1>
 
             <div className="hero-layout-split">
               <div className="hero-statement-col">
                 <p className="hero-mission-lead">
-                  I design enduring brand identities, tactile packaging, and editorial publications, and develop responsive websites and interactive digital experiences. By combining visual craft with software development, I help ambitious brands communicate clearly and reach a wider audience.
+                  I work across front-end development and graphic design. I build responsive, easy-to-use websites with React, JavaScript and CSS; as a graphic designer and art director, I also create visual identities, typography and editorial work. Both practices are grounded in clear ideas, thoughtful details and experiences that connect with people.
                 </p>
 
                 <div className="hero-core-tags">
+                  <span className="design-pill">React</span>
+                  <span className="design-pill">JavaScript</span>
+                  <span className="design-pill">HTML & CSS</span>
+                  <span className="design-pill">Responsive UI</span>
                   <span className="design-pill">Brand Identity</span>
-                  <span className="design-pill">Custom Packaging</span>
-                  <span className="design-pill">Editorial & Books</span>
-                  <span className="design-pill">Typography</span>
+                  <span className="design-pill">Typography & Editorial</span>
                   <span className="design-pill">Art Direction</span>
                 </div>
 
                 <div className="hero-actions">
-                  <a href="#projects" className="btn btn-primary">Explore Design Portfolio ↓</a>
-                  <a href="#contact" className="btn btn-outline">Commission a Project →</a>
+                  <a href="#projects" onClick={() => setFilter('Software Development')} className="btn btn-primary">Explore Front-end Projects {'\u2193'}</a>
+                  <a href="#projects" onClick={() => setFilter('Graphic Design')} className="btn btn-outline">Explore Graphic Design {'\u2193'}</a>
+                  <a href="#contact" className="btn btn-outline">Commission a Project {'\u2192'}</a>
                 </div>
               </div>
 
-              <div className="hero-artboard-card">
+              <div className="hero-artboard-card hero-development-card">
                 <div className="artboard-card-header">
                   <div className="artboard-controls">
                     <span className="control-dot red"></span>
                     <span className="control-dot yellow"></span>
                     <span className="control-dot green"></span>
                   </div>
-                  <span className="artboard-name">CANVAS: IDENTITY_SYSTEM_V2.AI</span>
-                  <span className="artboard-zoom">100%</span>
+                  <span className="artboard-name">BUILD: HOMEGRID / RESPONSIVE UI</span>
+                  <span className="artboard-zoom">WEB</span>
                 </div>
-
-                <div className="artboard-canvas-preview">
-                  <div className="artboard-grid-lines"></div>
-                  <div className="artboard-mock-composition">
-                    <div className="specimen-badge">BRAND IDENTITY // 2026</div>
-                    <div className="specimen-monogram">
-                      <span>R</span>
-                      <span className="monogram-dot">●</span>
-                      <span>N</span>
-                    </div>
-                    <div className="specimen-spec-row">
-                      <span>PANTONE 1795 C</span>
-                      <span className="swatch-sample-inline"></span>
-                      <span>350 GSM COTTON</span>
-                    </div>
-                    <div className="specimen-footer-tags">
-                      <span className="micro-tag">VECTOR PRECISION</span>
-                      <span className="micro-tag">FOIL STAMP</span>
-                      <span className="micro-tag">SWISS GRID</span>
-                    </div>
-                  </div>
+                <div className="hero-homegrid-preview">
+                  <ProjectVisual id={11} title="HomeGrid" subtitle="Responsive Estate Listing Website" />
                 </div>
 
                 <div className="artboard-status-bar">
                   <div className="status-metric">
-                    <span className="metric-label">CRAFT</span>
-                    <span className="metric-val">Identity & Print</span>
+                    <span className="metric-label">FOCUS</span>
+                    <span className="metric-val">Property discovery</span>
                   </div>
                   <div className="status-metric">
-                    <span className="metric-label">DELIVERABLES</span>
-                    <span className="metric-val">Logomarks, Guidelines</span>
+                    <span className="metric-label">BUILD</span>
+                    <span className="metric-val">Responsive React UI</span>
                   </div>
                   <div className="status-metric">
-                    <span className="metric-label">TOOLS</span>
-                    <span className="metric-val">Illustrator, InDesign</span>
+                    <span className="metric-label">DETAIL</span>
+                    <span className="metric-val">Search & listings</span>
                   </div>
                 </div>
               </div>
@@ -883,18 +939,24 @@ function App() {
 
         <div className="marquee-wrapper" aria-hidden="true">
           <div className="marquee-track">
-            <span>GRAPHIC DESIGN</span><span className="marquee-star">✦</span>
-            <span>BRAND IDENTITY</span><span className="marquee-star">✦</span>
-            <span>CUSTOM PACKAGING</span><span className="marquee-star">✦</span>
-            <span>EDITORIAL SYSTEMS</span><span className="marquee-star">✦</span>
-            <span>TYPOGRAPHIC CRAFT</span><span className="marquee-star">✦</span>
-            <span>ART DIRECTION</span><span className="marquee-star">✦</span>
-            <span>PRINT PRE-PRESS</span><span className="marquee-star">✦</span>
-            <span>BOOK DESIGN</span><span className="marquee-star">✦</span>
-            <span>GRAPHIC DESIGN</span><span className="marquee-star">✦</span>
-            <span>BRAND IDENTITY</span><span className="marquee-star">✦</span>
-            <span>CUSTOM PACKAGING</span><span className="marquee-star">✦</span>
-            <span>EDITORIAL SYSTEMS</span><span className="marquee-star">✦</span>
+            <span>FRONT-END DEVELOPMENT</span><span className="marquee-star">{'\u2726'}</span>
+            <span>RESPONSIVE WEB DESIGN</span><span className="marquee-star">{'\u2726'}</span>
+            <span>REACT & JAVASCRIPT</span><span className="marquee-star">{'\u2726'}</span>
+            <span>GRAPHIC DESIGN</span><span className="marquee-star">{'\u2726'}</span>
+            <span>BRAND IDENTITY</span><span className="marquee-star">{'\u2726'}</span>
+            <span>CUSTOM PACKAGING</span><span className="marquee-star">{'\u2726'}</span>
+            <span>EDITORIAL SYSTEMS</span><span className="marquee-star">{'\u2726'}</span>
+            <span>TYPOGRAPHIC CRAFT</span><span className="marquee-star">{'\u2726'}</span>
+            <span>ART DIRECTION</span><span className="marquee-star">{'\u2726'}</span>
+            <span>PRINT PRE-PRESS</span><span className="marquee-star">{'\u2726'}</span>
+            <span>BOOK DESIGN</span><span className="marquee-star">{'\u2726'}</span>
+            <span>FRONT-END DEVELOPMENT</span><span className="marquee-star">{'\u2726'}</span>
+            <span>RESPONSIVE WEB DESIGN</span><span className="marquee-star">{'\u2726'}</span>
+            <span>REACT & JAVASCRIPT</span><span className="marquee-star">{'\u2726'}</span>
+            <span>GRAPHIC DESIGN</span><span className="marquee-star">{'\u2726'}</span>
+            <span>BRAND IDENTITY</span><span className="marquee-star">{'\u2726'}</span>
+            <span>CUSTOM PACKAGING</span><span className="marquee-star">{'\u2726'}</span>
+            <span>EDITORIAL SYSTEMS</span><span className="marquee-star">{'\u2726'}</span>
           </div>
         </div>
       </section>
@@ -908,10 +970,19 @@ function App() {
               <span className="divider-slash">/</span>
               <span>2024 — 2026</span>
             </div>
-            <h2 className="section-title-editorial">Visual Works & Case Studies</h2>
+            <h2 className="section-title-editorial">
+              {filter === 'Front-end Development'
+                ? 'Front-end Development Projects'
+                : filter === 'Graphic Design'
+                  ? 'Graphic Design Projects'
+                  : 'Design & Development Projects'}
+            </h2>
             <p className="section-subtitle-editorial">
-              A curated index of brand identity systems, tactile packaging, editorial publications, 
-              and typographic explorations built for ambitious brands.
+              {filter === 'Software Development'
+                ? 'Responsive interfaces and web experiences—from property discovery to creative tools—built with a focus on clarity, usability and detail.'
+                : filter === 'Graphic Design'
+                  ? 'Selected visual identities, typography, editorial systems, packaging and art direction—creative work presented with the same care as my digital projects.'
+                  : 'A curated selection of graphic design, art direction and front-end development—from visual identity and editorial work to responsive web experiences.'}
             </p>
           </div>
 
@@ -924,7 +995,11 @@ function App() {
                   onClick={() => setFilter(cat)}
                 >
                   <span className="cat-count">
-                    {cat === 'All' ? projectsData.length : projectsData.filter(p => p.category === cat).length}
+                    {cat === 'All'
+                      ? projectsData.length
+                      : cat === 'Graphic Design'
+                        ? projectsData.filter(p => p.category !== 'Software Development').length
+                        : projectsData.filter(p => p.category === cat).length}
                   </span>
                   <span>{cat}</span>
                 </button>

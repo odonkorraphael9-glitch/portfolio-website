@@ -20,7 +20,7 @@ function About() {
             <div className="section-header-editorial">
               <div className="editorial-eyebrow"><span>DISCIPLINE & ETHOS</span><span className="divider-slash">/</span><span>ABOUT THE DESIGNER</span></div>
               <h1 className="section-title-editorial">Raphael Nuertey Odonkor</h1>
-              <p className="section-subtitle-editorial">Graphic Designer & Software Developer</p>
+              <p className="section-subtitle-editorial">Graphic Designer & Front-end Developer</p>
             </div>
             <div className="about-editorial-grid">
               <div className="about-manifesto">
@@ -37,7 +37,7 @@ function About() {
               <div className="about-interactive-col">
                 <div className="spec-card">
                   <h4>Practice</h4>
-                  <p>Brand identity · Editorial & print · Packaging · Software development</p>
+                  <p>Brand identity · Editorial & print · Packaging · Front-end development</p>
                 </div>
                 <div className="spec-card">
                   <h4>Studio base</h4>
