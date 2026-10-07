@@ -1090,6 +1090,11 @@ function App() {
                   Whether calculating paper caliper and foil deboss depths for custom packaging 
                   or laying out high-density editorial grid systems, every millimeter serves a deliberate purpose.
                 </p>
+                <p>
+                  As a front-end developer, I build responsive, accessible web experiences with React, JavaScript, and CSS. 
+                  I bring designs to life in the browser, focusing on clear interfaces, thoughtful interactions, and layouts 
+                  that feel natural across devices.
+                </p>
               </div>
 
               <div className="disciplines-grid">
