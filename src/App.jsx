@@ -884,7 +884,9 @@ function App() {
             <div className="hero-layout-split">
               <div className="hero-statement-col">
                 <p className="hero-mission-lead">
-                  I work across front-end development and graphic design. I build responsive, easy-to-use websites with React, JavaScript and CSS; as a graphic designer and art director, I also create visual identities, typography and editorial work. Both practices are grounded in clear ideas, thoughtful details and experiences that connect with people.
+                  I work across Front-End development and Graphic Design.
+                   I build responsive, easy-to-use websites with React, JavaScript and CSS; as a graphic designer and art director, I also create visual identities, typography and editorial work. Both practices are grounded in clear ideas, 
+                   thoughtful details and experiences that connect with people.
                 </p>
 
                 <div className="hero-core-tags">
