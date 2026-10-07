@@ -8,10 +8,14 @@ function About() {
         <div className="container nav-container">
           <Link to="/" className="logo-editorial"><span className="logo-initials">RK</span><span className="logo-sub">STUDIO / 26</span></Link>
           <nav className="nav-desktop">
+            <Link to="/" className="nav-link-editorial">Home</Link>
             <Link to="/work" className="nav-link-editorial">Work</Link>
             <Link to="/about" className="nav-link-editorial">About</Link>
             <Link to="/commission" className="nav-link-editorial">Commission</Link>
           </nav>
+          <div className="nav-mobile-controls">
+            <Link to="/" className="nav-link-editorial">Home</Link>
+          </div>
         </div>
       </header>
       <main>

@@ -792,6 +792,7 @@ function App() {
           </Link>
 
           <nav className="nav-desktop">
+            <Link to="/" className="nav-link-editorial">Home</Link>
             <Link to="/work" className="nav-link-editorial">Work</Link>
             <Link to="/about" className="nav-link-editorial">About & Ethos</Link>
             <Link to="/commission" className="nav-link-editorial">Commission</Link>
@@ -833,9 +834,10 @@ function App() {
               <button className="mobile-close-btn" onClick={() => setMenuOpen(false)}>✕</button>
             </div>
             <div className="mobile-nav-links">
-              <Link to="/work" onClick={() => setMenuOpen(false)}><span className="nav-num">01</span> Work & Case Studies</Link>
-              <Link to="/about" onClick={() => setMenuOpen(false)}><span className="nav-num">02</span> About & Ethos</Link>
-              <Link to="/commission" onClick={() => setMenuOpen(false)}><span className="nav-num">03</span> Commission / Inquiry</Link>
+              <Link to="/" onClick={() => setMenuOpen(false)}><span className="nav-num">01</span> Home</Link>
+              <Link to="/work" onClick={() => setMenuOpen(false)}><span className="nav-num">02</span> Work & Case Studies</Link>
+              <Link to="/about" onClick={() => setMenuOpen(false)}><span className="nav-num">03</span> About & Ethos</Link>
+              <Link to="/commission" onClick={() => setMenuOpen(false)}><span className="nav-num">04</span> Commission / Inquiry</Link>
             </div>
           </nav>
         </div>
