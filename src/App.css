@@ -3037,6 +3037,130 @@ img, svg {
   .footer-editorial {
     padding: 3.25rem 0 2rem;
   }
+
+  .modal-backdrop {
+    align-items: center;
+    padding: 0.6rem;
+  }
+
+  .modal-container {
+    width: 100%;
+    max-height: 94vh;
+    max-height: calc(100dvh - 1.2rem);
+    padding: 1.25rem;
+    border-radius: 14px;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
+  .modal-close-btn {
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .modal-header {
+    margin-bottom: 1.25rem;
+    padding-right: 2.75rem;
+  }
+
+  .modal-badge-group {
+    gap: 0.4rem;
+    padding-right: 0;
+  }
+
+  .editorial-pill {
+    max-width: 100%;
+    font-size: 0.64rem;
+    overflow-wrap: anywhere;
+  }
+
+  .modal-title {
+    font-size: clamp(1.65rem, 7vw, 2.3rem);
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
+
+  .modal-subtitle {
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .modal-visual-hero {
+    height: clamp(180px, 52vw, 280px);
+    margin-bottom: 1.5rem;
+  }
+
+  .modal-visual-hero .project-visual-image {
+    object-fit: contain;
+  }
+
+  .modal-body-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+
+  .modal-main-content,
+  .modal-spec-sidebar {
+    min-width: 0;
+  }
+
+  .modal-section-heading {
+    font-size: 1.1rem;
+  }
+
+  .modal-description {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  .modal-deliverables-box,
+  .modal-spec-sidebar .spec-card {
+    padding: 1rem;
+  }
+
+  .deliverables-list li {
+    align-items: flex-start;
+    gap: 0.55rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+  }
+
+  .modal-spec-sidebar {
+    gap: 0.85rem;
+  }
+
+  .modal-spec-sidebar .spec-card p {
+    overflow-wrap: anywhere;
+  }
+
+  .palette-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .palette-swatch {
+    min-width: 0;
+    gap: 0.4rem;
+  }
+
+  .swatch-info {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .modal-tags {
+    gap: 0.4rem;
+  }
+
+  .spec-tag {
+    max-width: 100%;
+    font-size: 0.64rem;
+    overflow-wrap: anywhere;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
@@ -3084,5 +3208,31 @@ img, svg {
   .studio-locations {
     grid-template-columns: 1fr;
     gap: 0.85rem;
+  }
+
+  .modal-backdrop {
+    padding: 0.35rem;
+  }
+
+  .modal-container {
+    max-height: calc(100dvh - 0.7rem);
+    padding: 1rem;
+  }
+
+  .modal-header {
+    padding-right: 2.5rem;
+  }
+
+  .modal-close-btn {
+    top: 0.55rem;
+    right: 0.55rem;
+  }
+
+  .modal-visual-hero {
+    height: 190px;
+  }
+
+  .palette-grid {
+    grid-template-columns: 1fr;
   }
 }
