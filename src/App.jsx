@@ -8,6 +8,7 @@ import journeyImage from './assets/journey.jpg';
 import examsImage from './assets/exams.jpg';
 import freshersImage from './assets/freshers.jpg';
 import awardsNightImage from './assets/awards night MAIN.jpg';
+import homegridImage from './assets/Homegrid.jpeg';
 
 // ============================================================================
 // DATA & CASE STUDIES
@@ -265,7 +266,8 @@ const projectsData = [
       "Property Discovery and Search Interface",
       "Scannable Property Cards and Details",
       "Mobile-first Front-end Layout"
-    ]
+    ],
+    image: homegridImage
   }
 ];
 
@@ -919,7 +921,7 @@ function App() {
                   <span className="artboard-zoom">WEB</span>
                 </div>
                 <div className="hero-homegrid-preview">
-                  <ProjectVisual id={11} title="HomeGrid" subtitle="Responsive Estate Listing Website" />
+                  <ProjectVisual id={11} title="HomeGrid" subtitle="Responsive Estate Listing Website" image={homegridImage} />
                 </div>
 
                 <div className="artboard-status-bar">
@@ -1015,7 +1017,7 @@ function App() {
             {filteredProjects.map((project, index) => (
               <article
                 key={project.id}
-                className="project-card-editorial"
+                className={`project-card-editorial ${project.id === 11 ? 'homegrid-project-card' : ''}`}
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="project-card-topbar">

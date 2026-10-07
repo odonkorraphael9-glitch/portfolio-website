@@ -663,6 +663,10 @@ img, svg {
   overflow: hidden;
 }
 
+.hero-homegrid-preview .project-visual-image {
+  object-fit: contain;
+}
+
 .hero-homegrid-preview .visual-homegrid {
   padding: 1rem 1.2rem;
 }
@@ -975,6 +979,10 @@ img, svg {
   overflow: hidden;
   background-color: #0b0c10;
   border-bottom: 1px solid var(--border-editorial);
+}
+
+.homegrid-project-card .project-visual-image {
+  object-fit: contain;
 }
 
 .project-view-overlay {
