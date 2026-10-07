@@ -33,7 +33,9 @@ function About() {
                   <p>Design is visual architecture: a meeting of deliberate typography, clear systems and useful technology.</p>
                 </div>
                 <div className="manifesto-body">
-                  <p>I work across visual identity, packaging, editorial design and front-end development. My practice combines concept-first thinking with careful execution, building brands and digital experiences that communicate with clarity.</p>
+
+                  <p>I am a Computer Science student of the Ghana Communication Technology University.
+                    I work across visual identity and front-end development. My practice combines concept-first thinking with careful execution, building brands and digital experiences that communicate with clarity.</p>
                   <p>Based in Accra, Ghana, I collaborate with ambitious people and teams locally and around the world.</p>
                 </div>
                 <Link to="/work" className="btn btn-primary">Explore selected work</Link>

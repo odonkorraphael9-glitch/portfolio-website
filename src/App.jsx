@@ -9,6 +9,7 @@ import examsImage from './assets/exams.jpg';
 import freshersImage from './assets/freshers.jpg';
 import awardsNightImage from './assets/awards night MAIN.jpg';
 import homegridImage from './assets/Homegrid.jpeg';
+import futureImage from './assets/future.jpg';
 
 // ============================================================================
 // DATA & CASE STUDIES
@@ -869,27 +870,21 @@ function App() {
           </div>
 
           <div className="hero-editorial-content">
-            <div className="hero-intro-pill">
-              <span>{'\u2726'} PORTFOLIO & STUDIO ARCHIVE</span>
-              <span className="divider-dot">{'\u2022'}</span>
-              <span>ACCRA / WORLDWIDE</span>
-            </div>
-
-            <h1 className="hero-main-heading">
-              <span className="designer-name-tag">{designerInfo.name}</span>
-              <span className="hero-giant-role">
-                FRONT-END <span className="serif-italic-accent">DEVELOPER</span>
-              </span>
-              <span className="hero-giant-sub">
-                Graphic Designer & Art Director
-              </span>
-            </h1>
-
             <div className="hero-layout-split">
               <div className="hero-statement-col">
+                <div className="hero-intro-pill">
+                  <span>{'\u2726'} PORTFOLIO & STUDIO ARCHIVE</span>
+                  <span className="divider-dot">{'\u2022'}</span>
+                  <span>ACCRA / WORLDWIDE</span>
+                </div>
+
+                <h1 className="hero-main-heading">
+                  Built to work. Designed to <span className="serif-italic-accent">Feel right</span>
+                </h1>
+
                 <p className="hero-mission-lead">
-                  I work across Front-End development and Graphic Design.
-                   I build responsive, easy-to-use websites with React, JavaScript and CSS; as a graphic designer and art director, I also create visual identities, typography and editorial work. Both practices are grounded in clear ideas, 
+                  My name is Raphael Nuertey Odonkor, a Front-End Developer and Graphic Designer based in Accra, Ghana.
+                   I build responsive, easy-to-use websites with React, JavaScript and CSS; as a graphic designer, I also create visual identities, typography and editorial work. Both practices are grounded in clear ideas, 
                    thoughtful details and experiences that connect with people.
                 </p>
 
@@ -910,34 +905,12 @@ function App() {
                 </div>
               </div>
 
-              <div className="hero-artboard-card hero-development-card">
-                <div className="artboard-card-header">
-                  <div className="artboard-controls">
-                    <span className="control-dot red"></span>
-                    <span className="control-dot yellow"></span>
-                    <span className="control-dot green"></span>
-                  </div>
-                  <span className="artboard-name">BUILD: HOMEGRID / RESPONSIVE UI</span>
-                  <span className="artboard-zoom">WEB</span>
-                </div>
-                <div className="hero-homegrid-preview">
-                  <ProjectVisual id={11} title="HomeGrid" subtitle="Responsive Estate Listing Website" image={homegridImage} />
-                </div>
-
-                <div className="artboard-status-bar">
-                  <div className="status-metric">
-                    <span className="metric-label">FOCUS</span>
-                    <span className="metric-val">Property discovery</span>
-                  </div>
-                  <div className="status-metric">
-                    <span className="metric-label">BUILD</span>
-                    <span className="metric-val">Responsive React UI</span>
-                  </div>
-                  <div className="status-metric">
-                    <span className="metric-label">DETAIL</span>
-                    <span className="metric-val">Search & listings</span>
-                  </div>
-                </div>
+              <div className="hero-visual-col">
+                <img
+                  className="hero-feature-image"
+                  src={futureImage}
+                  alt="A developer working at a laptop with a digital technology interface"
+                />
               </div>
             </div>
           </div>
@@ -1208,7 +1181,7 @@ function App() {
               </h2>
 
               <p className="contact-editorial-desc">
-                Currently accepting selected brand identity systems, physical packaging suites, 
+                Currently accepting selected brand identity systems, Front-End development projects, 
                 and editorial print commissions for 2026. Have a question or an exciting concept? 
                 Reach out and let’s discuss the vision.
               </p>

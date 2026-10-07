@@ -25,7 +25,7 @@ function Commission() {
               <div className="contact-info-col">
                 <div className="editorial-eyebrow"><span>COMMISSIONS & COLLABORATION</span><span className="divider-slash">/</span><span>GET IN TOUCH</span></div>
                 <h1 className="contact-big-title">Let's create something <span className="serif-italic">extraordinary</span> together.</h1>
-                <p className="contact-editorial-desc">I'm available for selected identity, packaging, and software development projects. 
+                <p className="contact-editorial-desc">I'm available for selected identity and software development projects. 
                     Share a little about what you have in mind and we can discuss the next steps.</p>
                 <div className="direct-email-card">
                   <span className="direct-email-label">DIRECT STUDIO INBOX</span>
@@ -44,7 +44,6 @@ function Commission() {
                   <h4>Project areas</h4>
                   <div className="modal-tags">
                     <span className="spec-tag">Brand Identity</span>
-                    <span className="spec-tag">Packaging</span>
                     <span className="spec-tag">Editorial & Print</span>
                     <span className="spec-tag">Software Development</span>
                   </div>
